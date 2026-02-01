@@ -1,6 +1,14 @@
 const noBtn = document.getElementById("noBtn");
 const music = document.getElementById("music");
 let scale = 1;
+const overlay = document.getElementById("tapToStart");
+overlay.addEventListener("click", () => {
+ music.play().then(() => {
+   music.pause();
+   music.currentTime = 0;
+   overlay.remove();
+ });
+});
 /* No button逃げる 😈 */
 noBtn.addEventListener("mouseover", dodge);
 noBtn.addEventListener("touchstart", dodge);
