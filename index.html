@@ -3,44 +3,38 @@
 <head>
 <meta charset="UTF-8" />
 <title>Will you be my Valentine?</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div id="tapToStart" class="tap-overlay">
- Tap anywhere ❤️
+<!-- Tap to start overlay -->
+<div id="tapOverlay" class="tap-overlay">
+   Tap anywhere ❤️
 </div>
 <!-- Main Card -->
 <div class="card" id="card">
 <div class="emoji">🐱❤️</div>
 <h2>Yashu, will you be my Valentine?</h2>
 <div class="buttons">
-<button class="yes" onclick="sayYes()">Yes 💖</button>
+<button class="yes" id="yesBtn">Yes 💖</button>
 <button class="no" id="noBtn">No 😏</button>
 </div>
 <p class="hint">No is feeling very shy today 🙈</p>
 </div>
-<!-- Celebration Screen -->
+<!-- Celebration -->
 <div id="celebration" class="celebration hidden">
 <img src="https://media.giphy.com/media/26gsjCZpPolPr3sBy/giphy.gif" />
 <h1>She said YES 💍❤️</h1>
-<p>Happy Valentine’s Day, Yashu papa 💕</p>
-<div class="countdown">
-
-      ⏳ Valentine in <span id="timer"></span>
-</div>
+<p>Happy Valentine’s Day 💕</p>
 <p class="from">– From Gopu 💌</p>
-<p id="secret" class="secret hidden">
-
-      You just made my whole year brighter 🌹
-</p>
 </div>
-<!-- Romantic Music (plays after YES click) -->
-<audio id="music" loop>
+<!-- Music -->
+<audio id="music" loop preload="auto">
 <source src="https://assets.mixkit.co/music/preview/mixkit-romantic-soft-piano-2213.mp3" type="audio/mpeg">
 </audio>
-<!-- Confetti Library -->
+<!-- Confetti -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-<script src="script.js"></script>
+<!-- Script -->
+<script src="script.js" defer></script>
 </body>
 </html>
- 
